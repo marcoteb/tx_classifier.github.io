@@ -24,7 +24,7 @@ document.getElementById('classifyBtn').addEventListener('click', function() {
 
   loadingDiv.style.display = 'block';
 
-  fetch('https://3ad6-35-232-232-66.ngrok-free.app/classify_transaction', {
+  fetch('https://cb04-104-196-194-246.ngrok-free.app/classify_transaction', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
