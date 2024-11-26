@@ -44,15 +44,15 @@ document.getElementById('classifyBtn').addEventListener('click', function() {
 
       // Mostrar detalles adicionales si tu API los proporciona
       // Por ejemplo:
-      // if (data.from_address) {
-      //   transactionDetailsDiv.innerHTML += `<p><strong>De:</strong> ${data.from_address}</p>`;
-      // }
-      // if (data.to_address) {
-      //   transactionDetailsDiv.innerHTML += `<p><strong>Para:</strong> ${data.to_address}</p>`;
-      // }
-      // if (data.value_in_ether) {
-      //   transactionDetailsDiv.innerHTML += `<p><strong>Valor:</strong> ${data.value_in_ether} ETH</p>`;
-      // }
+      if (data.transaction_data) {
+        const txData = data.transaction_data;
+        transactionDetailsDiv.innerHTML = `
+          <p><strong>De:</strong> ${txData.from_address}</p>
+          <p><strong>Para:</strong> ${txData.to_address}</p>
+          <p><strong>Valor:</strong> ${txData.value_in_ether} ETH</p>
+          <!-- Agrega más detalles si están disponibles -->
+        `;
+      }
     }
   })
   .catch(error => {
