@@ -24,7 +24,7 @@ document.getElementById('classifyBtn').addEventListener('click', function() {
 
   loadingDiv.style.display = 'block';
 
-  fetch('https://7ba6-35-223-149-37.ngrok-free.app/classify_transaction', {
+  fetch('https://ea3d-35-223-149-37.ngrok-free.app/classify_transaction', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
